@@ -18,15 +18,38 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">New User</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        
+      <!-- Modal form -->
+      <div class="mb-3">
+  <label for="completename">Name</label>
+  <input type="text" class="form-control" id="completename"
+   placeholder="Enter your name">
+</div>
+<div class="mb-3">
+  <label for="completeemail">Email</label>
+  <input type="text" class="form-control" id="completeemail"
+   placeholder="Enter your email">
+</div>
+<div class="mb-3">
+  <label for="completemobile">Mobile</label>
+  <input type="text" class="form-control" id="completemobile"
+   placeholder="Enter your mobile">
+</div>
+<div class="mb-3">
+  <label for="completeplace">Place</label>
+  <input type="text" class="form-control" id="completeplace"
+   placeholder="Enter your place">
+</div>
+
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </div>
