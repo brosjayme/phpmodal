@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,8 +32,8 @@
    placeholder="Enter your name">
 </div>
 <div class="mb-3">
-  <label for="completeemail">Email</label>
-  <input type="text" class="form-control" id="completeemail"
+  <label for="completemail">Email</label>
+  <input type="text" class="form-control" id="completemail"
    placeholder="Enter your email">
 </div>
 <div class="mb-3">
@@ -49,7 +51,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" onclick="adduser()">Submit</button>
       </div>
     </div>
   </div>
@@ -63,9 +65,48 @@
 </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+<script>
+
+function adduser(){
+ var nameAdd=$('#complename').val();
+ var emailAdd=$('#complemail').val();
+ var mobileAdd=$('#complemobile').val();
+ var placeAdd=$('#compleplace').val();
+
+$.ajax({
+url:"insert.php",
+type: 'post', 
+data:{
+  nameSend:nameAdd,
+  emailSend:emailAdd, 
+  mobileSend:mobileAdd,
+  placeSend:placeAdd,
+
+},
+success:function(data,status){
+  // function to display data
+  console.log(status);
+}
+
+
+})
+
+
+
+} 
+
+
+</script>
+
+
+
+
   
   </body>
 </html>
