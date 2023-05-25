@@ -1,9 +1,5 @@
 <?php
-// $hostname = 'localhost';
-// $name = '';
-// $email = '';
-// $mobile = '';
-// $place = '';
+
 
 $conn = new mysqli('localhost', 'root', '', 'modalphp');
 if($conn){
