@@ -85,10 +85,10 @@ $.ajax({
 url:"insert.php",
 type: 'post', 
 data:{
-  nameSend:nameAdd,
-  emailSend:emailAdd, 
-  mobileSend:mobileAdd,
-  placeSend:placeAdd,
+  'nameSend':nameAdd,
+  'emailSend':emailAdd, 
+  'mobileSend':mobileAdd,
+  'placeSend':placeAdd,
 
 },
 success:function(data,status){
