@@ -16,7 +16,8 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="completeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="completeModal" tabindex="-1"
+ aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -26,32 +27,32 @@
       <div class="modal-body">
         
       <!-- Modal form -->
+       <form action="index.php" method= "post">
       <div class="mb-3">
   <label for="completename">Name</label>
   <input type="text" class="form-control" id="completename"
-   placeholder="Enter your name">
+   placeholder="Enter your name" name='name'>
 </div>
 <div class="mb-3">
   <label for="completemail">Email</label>
   <input type="text" class="form-control" id="completemail"
-   placeholder="Enter your email">
+   placeholder="Enter your email" name='email'>
 </div>
 <div class="mb-3">
   <label for="completemobile">Mobile</label>
-  <input type="text" class="form-control" id="completemobile"
-   placeholder="Enter your mobile">
+  <input type="email" class="form-control" id="completemobile"
+   placeholder="Enter your mobile" name='mobile'>
 </div>
 <div class="mb-3">
   <label for="completeplace">Place</label>
   <input type="text" class="form-control" id="completeplace"
-   placeholder="Enter your place">
+   placeholder="Enter your place" name='place'>
 </div>
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary" onclick="adduser()">Submit</button>
+</form>
       </div>
     </div>
   </div>
@@ -82,15 +83,15 @@ function adduser(){
  var placeAdd=$('#compleplace').val();
 
 $.ajax({
-url:"insert.php",
+url:'insert.php',
 type: 'post', 
 data:{
   'nameSend':nameAdd,
   'emailSend':emailAdd, 
   'mobileSend':mobileAdd,
   'placeSend':placeAdd,
-
 },
+
 success:function(data,status){
   // function to display data
   console.log(status);
@@ -108,7 +109,5 @@ success:function(data,status){
 
 
 
-
-  
   </body>
 </html>
