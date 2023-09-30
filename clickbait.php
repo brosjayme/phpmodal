@@ -67,7 +67,12 @@ $honestHeadline = str_replace($a, $b, $clickBait);
   
     <?php 
     if(isset($_POST["fix_submit"])){
-        echo $honestHeadline;
+        echo "<strong class='text-danger'>Original Headline</strong>
+        <h4>".ucwords($clickBait)."</h4><hr>";
+
+
+                echo "<strong class='text-success'>Honest Headline</strong>
+        <h4>".ucwords($honestHeadline)."</h4>";
     }
     
     ?>
