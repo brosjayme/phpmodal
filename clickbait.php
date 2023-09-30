@@ -1,44 +1,11 @@
 <?php 
 define("TITLE", "Honest Click Bait Headlines");
+include("function.php");
+
+
 if(isset ($_POST["fix_submit"])){
-    //grab the value ofrom textarea in $_post 
-    //make all letters lowercase using strtolower()function
-    //store in a variable
-    $clickBait = strtolower ($_POST["clickbait_headline"]);
-//store array of clickbait-sounding words of phrases
-$a = array(
-    "scientists",
-    "doctors",
-    "hate",
-    "stupid",
-    "weird",
-    "simple",
-    "trick",
-    "shocked me",
-    "you'll never believe",
-    "hack",
-    "epic",
-    "unbelieveable"
-);
-
-
-//store array of replacementwords
-$b= array(
-    "so-called scientists",
-    "so-called doctors",
-    "aren't threatened by",
-    "average",
-    "method",
-    "is no different than the others",
-    "you won't really be surprised by",
-    "slightly improve",
-    "boring",
-    "normal"
-);
-
-
-//use the str_ replace( func)
-$honestHeadline = str_replace($a, $b, $clickBait);
+    //call function
+    checkForClickBaits();
 }
 
 ?>
@@ -67,12 +34,13 @@ $honestHeadline = str_replace($a, $b, $clickBait);
   
     <?php 
     if(isset($_POST["fix_submit"])){
-        echo "<strong class='text-danger'>Original Headline</strong>
-        <h4>".ucwords($clickBait)."</h4><hr>";
 
+        $clickBait = checkForClickBaits()[0];
+                $honestHeadline = checkForClickBaits()[1];
 
-                echo "<strong class='text-success'>Honest Headline</strong>
-        <h4>".ucwords($honestHeadline)."</h4>";
+        //function call
+        displayHonestHeadline($clickBait, $honestHeadline);
+
     }
     
     ?>
