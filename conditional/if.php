@@ -27,6 +27,15 @@ define("TITLE", "Honest Click Bait Headlines");
 
  }
     
+
+ //ELSE
+  if(something ) {
+// true 
+echo "something";
+ }else {
+    // false
+echo "original";
+ }
     ?>
 
 

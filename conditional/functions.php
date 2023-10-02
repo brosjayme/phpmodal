@@ -28,7 +28,7 @@ function myFirstFunction(){
 
      }while($a < 300);
 
-}
+};
 
 //function call
 myFirstFunction();
