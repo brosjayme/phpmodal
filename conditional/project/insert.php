@@ -37,10 +37,12 @@ if( mysqli_query ($conn, $query)){
     echo "Error: ". $query ."<br>". mysqli_error($conn);
 }
 }
+
 }
 
-//mysql insert query 
+// mysql insert query 
 
+mysqli_close($conn);
 
 ?>
 
